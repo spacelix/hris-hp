@@ -31,7 +31,7 @@ jobs:
     - name: Install Package.json
       run: npm install
     - name: Vite On
-      run : npm run dev
+      run : npm run build
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       env:
         DB_CONNECTION: sqlite
