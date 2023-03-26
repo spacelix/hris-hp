@@ -3,6 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
@@ -25,6 +26,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'image',
+        'area_id',
     ];
 
     /**
@@ -45,4 +48,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     * Get the area that owns the user.
+     */
+    public function area()
+    {
+        return $this->belongsTo(Area::class);
+    }
 }

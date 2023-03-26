@@ -14,12 +14,12 @@ class RoleController extends Controller
     {
 
         $roles = Role::latest()->get();
-        $users = User::with('roles')->get();
-        $perms = Permission::latest()->get();
+        $users = User::get();
+        $us = User::with('roles')->get();
+        // dd();
         return view('superadmin.Roles.index', [
             'roles' => $roles,
             'users' => $users,
-            'perms' => $perms
         ]);
     }
 
