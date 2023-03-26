@@ -22,6 +22,7 @@ class UserSeeder extends Seeder
         $admin = \App\Models\User::factory()->create([
             'name' => 'Admin',
             'email' => 'admin@haleyorapower.com'
+
         ]);
 
         $super->assignRole('super-admin');

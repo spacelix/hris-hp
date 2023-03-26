@@ -13,10 +13,10 @@
                         </path>
                     </svg>
                 </button>
-                <a href="https://flowbite.com" class="flex ml-2 md:mr-24">
+                <a href="/" class="flex ml-2 md:mr-24">
                     <img src="{{ asset('assets/logo.png') }}" class="h-10 mr-3" alt="FlowBite Logo" />
                     <span
-                        class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">{{ config('app.name', 'Laravel') }}</span>
+                        class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white hidden sm:block">{{ config('app.name', 'Laravel') }}</span>
                 </a>
             </div>
 
