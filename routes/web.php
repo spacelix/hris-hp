@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UlpController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -29,6 +30,10 @@ Route::middleware(['role:super-admin'])->group(function () {
     Route::resource('roles', RoleController::class);
     Route::resource('area', AreaController::class);
     Route::resource('users', UserController::class);
+});
+
+Route::middleware(['role:admin'])->group(function () {
+    Route::resource('ulps', UlpController::class);
 });
 
 Route::middleware('auth')->group(function () {

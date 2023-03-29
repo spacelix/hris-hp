@@ -36,21 +36,38 @@
             </li>
         </ul>
         <div class="pt-2 space-y-2">
-            <x-nav-link :href="route('area.index')" :active="request()->routeIs('area.*')">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-building-community flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400
-                dark:group-hover:text-white"
-                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8"></path>
-                    <path d="M13 7l0 .01"></path>
-                    <path d="M17 7l0 .01"></path>
-                    <path d="M17 11l0 .01"></path>
-                    <path d="M17 15l0 .01"></path>
-                </svg>
-                <span class="ml-3" sidebar-toggle-item>Area</span>
-            </x-nav-link>
+            @can('super-admin')
+                <x-nav-link :href="route('area.index')" :active="request()->routeIs('area.*')">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-building-community flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8"></path>
+                        <path d="M13 7l0 .01"></path>
+                        <path d="M17 7l0 .01"></path>
+                        <path d="M17 11l0 .01"></path>
+                        <path d="M17 15l0 .01"></path>
+                    </svg>
+                    <span class="ml-3" sidebar-toggle-item>Area</span>
+                </x-nav-link>
+            @endcan
+            @role('admin')
+                <x-nav-link :href="route('ulps.index')" :active="request()->routeIs('ulps.*')">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-building-community flex-shrink-0 w-6 h-6 " viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8"></path>
+                        <path d="M13 7l0 .01"></path>
+                        <path d="M17 7l0 .01"></path>
+                        <path d="M17 11l0 .01"></path>
+                        <path d="M17 15l0 .01"></path>
+                    </svg>
+                    <span class="ml-3" sidebar-toggle-item>ULP</span>
+                </x-nav-link>
+            @endrole
             <a href="https://flowbite.com/docs/getting-started/introduction/" target="_blank"
                 class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
                 <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"

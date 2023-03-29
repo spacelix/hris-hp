@@ -28,4 +28,12 @@ class Area extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    /**
+     * Get the ulps for the area.
+     */
+    public function ulps()
+    {
+        return $this->hasMany(Ulp::class);
+    }
 }

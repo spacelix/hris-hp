@@ -19,13 +19,7 @@ class UserSeeder extends Seeder
             'email' => 'superadmin@haleyorapower.com',
         ]);
 
-        $admin = \App\Models\User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@haleyorapower.com'
-
-        ]);
 
         $super->assignRole('super-admin');
-        $admin->assignRole('admin');
     }
 }
