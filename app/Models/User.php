@@ -16,7 +16,6 @@ class User extends Authenticatable
     use HasFactory;
     use Notifiable;
     use HasRoles;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -56,5 +55,13 @@ class User extends Authenticatable
     public function area()
     {
         return $this->belongsTo(Area::class);
+    }
+
+    /**
+     * Get the ulps for the user.
+     */
+    public function ulps()
+    {
+        return $this->hasMany(Ulp::class);
     }
 }

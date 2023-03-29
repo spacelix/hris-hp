@@ -38,7 +38,6 @@ class AreaController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-
         ]);
 
         $area->update([
