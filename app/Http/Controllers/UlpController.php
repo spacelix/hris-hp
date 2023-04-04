@@ -48,9 +48,9 @@ class UlpController extends Controller
         flash()->addSuccess('Ulp Succesfully Added!');
         return redirect()->back();
     }
-    public function show($id)
+    public function show(Ulp $ulp)
     {
-        //
+        return view('admin.ULP.show');
     }
     public function edit($id)
     {

@@ -1,6 +1,6 @@
 <x-app-layout>
     <div
-        class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+        class="p-4 bg-white border-gray-200 rounded-lg shadow-sm 2xl:col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800 border-2 dark:border-none">
         <div class="w-full mb-1">
             <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white mb-3">Roles & Permissions</h1>
             <div class="items-center justify-between block sm:flex mb-6">

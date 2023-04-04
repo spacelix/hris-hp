@@ -27,6 +27,7 @@
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/datepicker.min.js"></script>
+    <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet" />
 </head>
 
 <body class="font-sans antialiased bg-gray-50 dark:bg-gray-800">

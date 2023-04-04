@@ -1,5 +1,6 @@
 <x-app-layout>
-    <div class="p-4 sm:p-8 bg-white block sm:flex items-center justify-between rounded-xl lg:mt-1.5 dark:bg-gray-800">
+    <div
+        class="p-4 sm:p-8 bg-white block sm:flex items-center justify-between rounded-xl lg:mt-1.5 dark:bg-gray-800 border-2 dark:border-none">
         <div class="w-full mb-1">
             <div class="items-center justify-between block sm:flex mb-6">
                 <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white mb-3">Area & Ulp</h1>

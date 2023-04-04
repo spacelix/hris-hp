@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UlpController;
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\RoleController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UlpController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,8 @@ Route::middleware(['role:super-admin'])->group(function () {
 
 Route::middleware(['role:admin'])->group(function () {
     Route::resource('ulps', UlpController::class);
+    Route::resource('pegawai', PegawaiController::class);
+    Route::get('pegawai/filter', [PegawaiController::class, 'filter'])->name('pegawai.filter');
 });
 
 Route::middleware('auth')->group(function () {
